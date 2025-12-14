@@ -17,8 +17,6 @@ Host Machine
 │ ├─ alpine / node / maven / etc.
 │ └─ Auto-created & destroyed per build
 
-yaml
-Copy code
 
 ---
 
