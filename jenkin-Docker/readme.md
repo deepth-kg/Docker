@@ -9,10 +9,12 @@ Deploy Jenkins in Docker and spin up ephemeral Docker agents for builds. **For d
 
 Host Machine
 ├─ Docker Daemon
-│ ├─ Jenkins Container
-│ │ ├─ Jenkins Home (volume)
-│ │ ├─ Docker CLI
-│ │ └─ docker.sock mounted
+
+├─ Jenkins Container
+     ├─ Jenkins Home (volume)
+     ├─ Docker CLI
+     └─ docker.sock mounted
+     
 │ └─ Ephemeral Build Containers
 │ ├─ alpine / node / maven / etc.
 │ └─ Auto-created & destroyed per build
