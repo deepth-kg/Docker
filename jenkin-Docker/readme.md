@@ -1,6 +1,4 @@
-<img width="972" height="251" alt="image" src="https://github.com/user-attachments/assets/624e7b6c-3cc4-4f6c-aaed-29cf92e53354" />
-Here What we are trying to achieve is deploy jenkins in docker and then spin up a new docker agent(ephemeral) for build (Dev/testing only) 
-
+*Here What we are trying to achieve is deploy jenkins in docker and then spin up a new docker agent(ephemeral) for build (Dev/testing only) *
 
 so My docker is in my local check whether is docker is installed or not 
 
@@ -118,5 +116,23 @@ pipeline {
 now you can see a new docker is spin up 
 <img width="1303" height="273" alt="image" src="https://github.com/user-attachments/assets/4eb4757c-c334-44c7-b0b9-5bb22952c3b3" />
 
+Once after the build is completed, the spin up docker will be deleted 
 
+
+Note :
+5️⃣ Security Concerns (VERY IMPORTANT)
+⚠️ BIGGEST RISK⚠️
+-v /var/run/docker.sock:/var/run/docker.sock
+
+Anyone with Jenkins access can:
+
+Run privileged containers
+
+Escape to host
+
+Delete images
+
+Mount /
+
+So just try out this setup for local purposes only 
 
